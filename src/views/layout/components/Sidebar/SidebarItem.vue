@@ -3,7 +3,7 @@
     <template v-for="item in routes">
       <template v-if="!item.hidden && item.children">
         <template
-          v-if="hasOneShowingChild(item.children,item) &&!item.alwaysShow">
+          v-if="hasOneShowingChild(item.children, item) && !item.alwaysShow"
         >
           <router-link
             class="test1"
@@ -15,14 +15,16 @@
               :class="{ 'submenu-title-noDropdown': !isNest }"
             >
               <svg-icon
-                v-if="item.children[0].meta.icon||(item.meta&&item.meta.icon)"
-                :icon-class="item.children[0].meta.icon||(item.meta&&item.meta.icon)"
+                v-if="
+                  item.children[0].meta.icon || (item.meta && item.meta.icon)
+                "
+                :icon-class="
+                  item.children[0].meta.icon || (item.meta && item.meta.icon)
+                "
               />
-              <span
-                v-if="item.children[0].meta.title"
-                slot="title"
-                >{{ generateTitle(item.children[0].meta.title) }}</span
-              >
+              <span v-if="item.children[0].meta.title" slot="title">{{
+                generateTitle(item.children[0].meta.title)
+              }}</span>
             </el-menu-item>
           </router-link>
         </template>
@@ -146,3 +148,10 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.menu-wrapper {
+  ::v-deep .el-tooltip {
+    left: -10px !important;
+  }
+}
+</style>
