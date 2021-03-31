@@ -13,6 +13,7 @@ import Layout from '../views/layout/Layout'
 /* components router */
 import componentsRouterList from './components-router'
 import TempRouterList from './temp-router'
+import { getCheckRepair } from './check-repair'
 
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -31,15 +32,15 @@ export const constantRouterMap = [
   {
     path: '',
     component: Layout,
-    redirect: '/dashboard/dashboard'
+    redirect: '/dashboard'
   },
   { path: '/login', component: () => import('@/views/login'), name: 'login', hidden: true },
 
   // 报表
   {
-    path: '/dashboard',
+    path: '/',
     component: Layout,
-    meta: { title: 'dashboard', icon: 'dashboard' },
+    redirect: '/dashboard',
     children: [
       {
         path: 'dashboard',
@@ -63,6 +64,8 @@ export const constantRouterMap = [
     children: TempRouterList
   },
 
+  // check-repair
+  getCheckRepair(Layout),
 
   // 锁屏
   {
@@ -84,7 +87,6 @@ export const constantRouterMap = [
     },
     children: componentsRouterList
   },
-  
   {
     path: '/error',
     component: Layout,
@@ -113,11 +115,11 @@ export const constantRouterMap = [
       }
     ]
   },
-  { path: '*', redirect: '/404', hidden: true }
+  { path: '*', redirect: '/error/404', hidden: true }
 ]
 
 export default new Router({
-  mode: 'history', //后端支持可开
+  // mode: 'history', //后端支持可开
   base: window.__POWERED_BY_QIANKUN__ ? '/template-name/' : '/', // 这里需要修改文件名称
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
