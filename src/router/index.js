@@ -13,7 +13,6 @@ import Layout from '../views/layout/Layout'
 /* components router */
 import componentsRouterList from './components-router'
 import TempRouterList from './temp-router'
-import { getCheckRepair } from './check-repair'
 
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -63,9 +62,6 @@ export const constantRouterMap = [
     },
     children: TempRouterList
   },
-
-  // check-repair
-  getCheckRepair(Layout),
 
   // 锁屏
   {
