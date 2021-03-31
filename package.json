@@ -1,7 +1,7 @@
 {
   "name": "empty-admin",
   "version": "0.1.0",
-  "description": "基于G6搭建一个后台，里面存放的都是和G6相关的东西",
+  "description": "基于empty搭建一个后台，里面存放的都是和empty相关的东西",
   "main": "index.js",
   "license": "GPL2.0",
   "author": "aiyoudiao <newdiao@163.com>",
@@ -27,7 +27,7 @@
     "vue",
     "element-ui",
     "visual",
-    "g6",
+    "empty",
     "admin",
     "grpha"
   ],

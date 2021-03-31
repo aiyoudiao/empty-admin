@@ -50,7 +50,7 @@ export const constantRouterMap = [
     ]
   },
 
-  // G6
+  // empty
   {
     path: '/temp',
     component: Layout,
