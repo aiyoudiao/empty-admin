@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "strict": false,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "moduleResolution": "node",
+    "module": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "baseUrl": "."
+  },
+  "exclude": []
+}
