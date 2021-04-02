@@ -111,7 +111,8 @@ export const constantRouterMap = [
       }
     ]
   },
-  { path: '*', redirect: '/error/404', hidden: true }
+  // { path: '*', redirect: '/error/404', hidden: true }
+  { path: '*', redirect: '/dashboard', hidden: true }
 ]
 
 export default new Router({
