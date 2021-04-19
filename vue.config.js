@@ -58,7 +58,8 @@ module.exports = {
           ['^' + process.env.VUE_APP_BASE_API]: '/api' // 举例 '^/api:""' 把路径中的/api字符串删除
         }
       }
-    }
+    },
+    before: require('./server-mock/server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

@@ -19,7 +19,8 @@ import '@/styles/index.scss' // global css
 // import 'v-contextmenu/dist/index.css'
 
 /* NOTE: 如果引入mockjs，文件下载时，axios 获取不到blob对象，只能获取blob转换后的字符串 */
-import './mock' // simulation data
+// import './mock' // simulation data
+
 import './errorLog'// error log
 // font-awesome
 import '@/assets/library/font-awesome-4.7.0/css/font-awesome.min.css'
